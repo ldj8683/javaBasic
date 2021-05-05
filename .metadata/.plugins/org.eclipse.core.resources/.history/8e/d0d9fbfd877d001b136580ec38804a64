@@ -1,0 +1,16 @@
+package 크롤링;
+
+import java.io.IOException;
+
+import org.jsoup.Connection;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+
+public class OPGG {
+
+	public static void main(String[] args) throws Exception {
+		Connection con = Jsoup.connect("https://finance.naver.com/sise/");
+		Document doc = con.get();
+	}
+
+}

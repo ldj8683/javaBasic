@@ -1,0 +1,73 @@
+package 파일저장;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JTextField;
+import java.awt.Color;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class 로그인 {
+	private static JTextField t1;
+	private static JTextField t2;
+
+	public static void main(String[] args) {
+		JFrame f = new JFrame();
+		f.getContentPane().setBackground(Color.YELLOW);
+		f.setTitle("로그인 창입니다.");
+		f.setSize(350, 500);
+		f.getContentPane().setLayout(null);
+		
+		JLabel top = new JLabel("");
+		top.setBounds(42, 10, 261, 165);
+		f.getContentPane().add(top);
+		
+		// top에 이미지를 넣기위해서 객체 생성
+		ImageIcon icon = new ImageIcon("top.png");
+		top.setIcon(icon);
+		
+		JLabel l2 = new JLabel("아이디");
+		l2.setFont(new Font("굴림체", Font.BOLD, 20));
+		l2.setBounds(42, 185, 107, 48);
+		f.getContentPane().add(l2);
+		
+		JLabel l3 = new JLabel("패스워드");
+		l3.setFont(new Font("굴림체", Font.BOLD, 20));
+		l3.setBounds(42, 243, 107, 48);
+		f.getContentPane().add(l3);
+		
+		t1 = new JTextField();
+		t1.setForeground(Color.BLUE);
+		t1.setBackground(Color.CYAN);
+		t1.setFont(new Font("굴림체", Font.BOLD, 20));
+		t1.setBounds(143, 186, 160, 47);
+		f.getContentPane().add(t1);
+		t1.setColumns(10);
+		
+		t2 = new JTextField();
+		t2.setForeground(Color.BLUE);
+		t2.setBackground(Color.CYAN);
+		t2.setFont(new Font("굴림체", Font.BOLD, 20));
+		t2.setColumns(10);
+		t2.setBounds(143, 243, 160, 47);
+		f.getContentPane().add(t2);
+		
+		JButton login = new JButton("");
+		login.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		login.setBounds(12, 338, 137, 100);
+		f.getContentPane().add(login);
+		
+		JButton reset = new JButton("");
+		reset.setBounds(185, 338, 137, 100);
+		f.getContentPane().add(reset);
+		
+		f.setVisible(true);
+	}
+}

@@ -1,0 +1,10 @@
+package 그래픽;
+
+public class ThreadGraphic {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

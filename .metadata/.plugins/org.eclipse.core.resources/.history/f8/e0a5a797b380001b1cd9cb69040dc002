@@ -1,0 +1,52 @@
+package Graphic1;
+
+import java.io.IOException;
+
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
+import org.jsoup.Connection;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.select.Elements;
+
+public class UpDown extends Thread {
+	JLabel updown;
+	public UpDown(JLabel upDown2) {
+		updown = upDown2;
+	}
+	@Override
+	public void run() {
+		String[] sList = {"005930","035720","068270","035420","000660"};
+		String[] list2 = new String[sList.length];
+		for (int i = 0; i < sList.length; i++) {
+			Connection con = Jsoup.connect("https://finance.naver.com/item/main.nhn?code="+sList[i]);
+			Document doc = null;
+			try {
+				doc = con.get();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			Elements price = doc.select("div.rate_info div.today");
+			if(price.text().split(" ")[3].equals("상승")) {
+				list2[i] = "01.png";
+			} else {
+				list2[i] = "02.png";
+			}
+		}
+		int cnt = 100;
+		while(cnt>0) {
+			for(int i = 0; i < sList.length ; i++ ) {
+				ImageIcon icon = new ImageIcon(list2[i]);
+				updown.setIcon(icon);
+				try {
+					Thread.sleep(1950);
+				} catch (InterruptedException e) {
+					//interrupt : 일시적 방해, 중단 >> esc, ctrl+c, power-off, alt+f4
+				}
+			}
+		}
+	}
+}

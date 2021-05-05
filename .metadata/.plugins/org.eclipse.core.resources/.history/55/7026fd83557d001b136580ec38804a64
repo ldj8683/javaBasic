@@ -1,0 +1,10 @@
+package 예외처리;
+
+public class 문제발생클래스 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

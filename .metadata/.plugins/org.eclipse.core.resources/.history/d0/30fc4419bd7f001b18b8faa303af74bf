@@ -1,0 +1,9 @@
+package 상속;
+
+public class Manager extends Employee{
+	private int bonus = 100;
+	
+	public void test() {
+		System.out.println(bonus + "만원의 보너스를 받으며 관리/감독을 합니다.");
+	}
+}

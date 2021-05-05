@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<title>memberLogin</title>
+		<!-- java script -->
+		<script type="text/javascript">
+			//alert('내가 동적으로 떠요!') /* 브라우저에 따라 다르네요 */
+			id = prompt('id를 입력하세요.')
+			alert('글자수 '+id.length)
+			alert(id.length)
+			if(id.length >= 5){
+				alert('id가 5글자 이상입니다.')
+			}else{
+				alert('id가 5글자 미만입니다. 다시 입력해주세요')
+			}
+		</script>
+		<script type="text/javascript" src="out.js"></script>
+		<!-- 필요한 기능을 찾아서 한번 더 써서 해당 function을 넣어주어야 한다. -->
+		<script type="text/javascript">
+			welcome()
+		</script>
+	</head>
+	<body>		
+		<h2>회원가입화면입니다.</h2>
+		<hr width="1000" color="black">
+		아이디 : <input><br>
+		패스워드 : <input><br>
+		이름 : <input><br>
+		연락처 : <input><br>
+		<button><img src="memberLogin.png" width="50" height="50"></button>
+		<hr width="1000" color="black">
+		<a href="check.html">체크로 넘어가봅시다.</a>
+	</body>
+</html>

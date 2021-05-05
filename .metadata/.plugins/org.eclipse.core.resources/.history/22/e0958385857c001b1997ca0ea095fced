@@ -1,0 +1,16 @@
+package 어제복습;
+
+public class Phone {
+	String color;
+	int size;
+	
+	public void internet() {
+		System.out.println("인터넷 하다.");
+	}
+	public void text() {
+		System.out.println("문자하다.");
+	}
+	
+	
+
+}

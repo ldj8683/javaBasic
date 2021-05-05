@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>회원가입화면</title>
+	</head>
+	<body>
+		<h1>회원가입 화면입니다.</h1>
+		<hr width="1000" color="red">
+		<!-- form 갑을 입력하고 싶을 때 사용 -->
+		<!-- 입력값들은 모두 form안에 들어가야 한다 -->
+		<!-- action: 입력값을 받아서 처리하는 다음 페이지를 지정 -->
+		<form action="member2.jsp">
+			<!-- 자바를 쓸수 있는 웹용 부품이 필요하다 => .jsp -->
+			아이디: <input name="id"><br>
+			패스워드: <input name="pw"><br>
+			이름: <input name="name"><br>
+			연락처: <input name="tel"><br>
+			<button>서버로 전송</button>	
+			<!-- http://localhost:8888/web02/member2.html?id=root&pw=1234&name=park&tel=011 -->
+			<!-- 입력을 하면 위 주석처럼 데이터를 전송합니다. -->
+		</form>
+	</body>
+</html>

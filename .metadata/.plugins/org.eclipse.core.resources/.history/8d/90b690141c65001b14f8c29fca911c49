@@ -1,0 +1,43 @@
+package conditional;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import java.awt.BorderLayout;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class Graphic {
+
+	public static void main(String[] args) {
+		// 각 변수명으로 할당하겠다.
+		// JFrame 프레임을 만들겠다. 
+		JFrame f = new JFrame();
+		// f 라는 프레임의 크기를 정함
+		f.setSize(500, 500);
+		
+		JButton btnNewButton = new JButton("New button");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
+		f.getContentPane().add(btnNewButton, BorderLayout.NORTH);
+		
+		JButton btnNewButton_1 = new JButton("New button");
+		f.getContentPane().add(btnNewButton_1, BorderLayout.WEST);
+		
+		JButton btnNewButton_2 = new JButton("New button");
+		f.getContentPane().add(btnNewButton_2, BorderLayout.CENTER);
+		
+		JButton btnNewButton_3 = new JButton("New button");
+		f.getContentPane().add(btnNewButton_3, BorderLayout.EAST);
+		
+		JButton btnNewButton_4 = new JButton("New button");
+		f.getContentPane().add(btnNewButton_4, BorderLayout.SOUTH);
+		// f 라는 프레임을 띄워줌
+		//(최종적으로 조립한 것들을 띄워주는 것이기 때문에 창을 만드는 코딩에서 맨 마지막에 넣어줘야함)
+		f.setVisible(true);
+			
+		
+	}
+
+}

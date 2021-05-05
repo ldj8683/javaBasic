@@ -1,0 +1,37 @@
+package 그래픽;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import java.awt.Color;
+import javax.swing.JLabel;
+import java.awt.Font;
+
+public class 카운트다운 {
+
+	public static void main(String[] args) {
+		날짜 day = new 날짜();
+		이미지 img = new 이미지();
+		카운트 cnt = new 카운트();
+		
+		JFrame f = new JFrame("카운트 다운");
+		f.getContentPane().setBackground(Color.LIGHT_GRAY);
+		f.setSize(800, 300);
+		f.getContentPane().setLayout(null);
+		
+		JLabel l1 = new JLabel("");
+		l1.setFont(new Font("맑은 고딕", Font.BOLD, 30));
+		l1.setBounds(180, 61, 205, 39);
+		f.getContentPane().add(l1);
+		
+		JLabel image = new JLabel("");
+		image.setFont(new Font("맑은 고딕", Font.BOLD, 30));
+		image.setBounds(388, 4, 233, 153);
+		f.getContentPane().add(image);
+		
+		JLabel l3 = new JLabel("");
+		l3.setFont(new Font("맑은 고딕", Font.BOLD, 30));
+		l3.setBounds(53, 167, 672, 62);
+		f.getContentPane().add(l3);
+		f.setVisible(true);
+	}
+}

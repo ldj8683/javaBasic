@@ -1,0 +1,14 @@
+package conditional;
+
+import javax.swing.JFrame;
+
+public class Graphic02 {
+
+	public static void main(String[] args) {
+		JFrame f = new JFrame();
+		f.setSize(600, 800);
+		f.setVisible(true);	
+
+	}
+
+}

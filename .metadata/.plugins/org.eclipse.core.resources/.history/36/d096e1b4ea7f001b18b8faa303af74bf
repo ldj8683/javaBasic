@@ -1,0 +1,23 @@
+package 그래픽;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class ThreadGraphic extends JFrame {
+	
+	private static final long serialVersionUID = 1L;
+	JLabel count, image, day ;
+	
+	public ThreadGraphic() {
+		setSize(800, 350);
+		
+		setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		new ThreadGraphic();
+//		ThreadGraphic t = new ThreadGraphic();
+		
+	}
+
+}

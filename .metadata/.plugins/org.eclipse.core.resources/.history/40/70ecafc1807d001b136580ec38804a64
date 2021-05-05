@@ -1,0 +1,20 @@
+package 크롤링;
+
+
+import org.jsoup.Connection;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.select.Elements;
+
+public class 네이버크롤링 {
+
+	public static void main(String[] args) throws Exception {
+		Connection con = Jsoup.connect("https://finance.naver.com/item/main.nhn?code=035720");
+		Document doc = con.get();
+		
+		Elements div = doc.select("div.rate_info");
+		System.out.println(div.size());
+
+	}
+
+}

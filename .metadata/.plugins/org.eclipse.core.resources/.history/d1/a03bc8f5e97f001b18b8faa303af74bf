@@ -1,0 +1,19 @@
+package 그래픽;
+
+import javax.swing.JLabel;
+
+public class ThreadGraphic {
+	
+	JLabel count, image, date ;
+	
+	public ThreadGraphic() {
+		
+	}
+
+	public static void main(String[] args) {
+		new ThreadGraphic();
+//		ThreadGraphic t = new ThreadGraphic();
+		
+	}
+
+}

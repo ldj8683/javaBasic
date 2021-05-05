@@ -1,0 +1,10 @@
+package Graphic2;
+
+public class Count extends Thread{
+	@Override
+	public void run() {
+		for(int i = 500 ; i > 0 ; i --) {
+			
+		}
+	}
+}

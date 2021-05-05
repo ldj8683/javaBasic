@@ -1,0 +1,5 @@
+package 그래픽;
+
+public class 카운트 extends Thread {
+
+}

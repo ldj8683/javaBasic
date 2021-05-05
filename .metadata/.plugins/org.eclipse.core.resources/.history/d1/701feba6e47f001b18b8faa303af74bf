@@ -1,0 +1,14 @@
+package 그래픽;
+
+public class 동시프로그램실행 {
+
+	public static void main(String[] args) {
+		날짜 date = new 날짜();
+		이미지 img = new 이미지();
+		카운트 cnt = new 카운트();
+		date.start();
+		img.start();
+		cnt.start();
+	}
+
+}

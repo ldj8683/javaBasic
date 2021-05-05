@@ -1,0 +1,15 @@
+package 상속;
+
+public class 영화에출연 {
+	public static void main(String[] args) {
+		수퍼맨 sMan = new 수퍼맨();
+		sMan.name = "클라크";
+		sMan.age = 30000;
+		sMan.speed = 1000;
+		sMan.fly = true;
+		
+		sMan.먹다();
+		sMan.달리다();
+		sMan.우주를날다();
+	}
+}

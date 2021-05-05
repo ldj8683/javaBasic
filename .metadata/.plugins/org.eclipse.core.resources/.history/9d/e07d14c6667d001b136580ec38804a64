@@ -1,0 +1,72 @@
+package 파일저장;
+
+import javax.swing.JFrame;
+import java.awt.Color;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+import javax.swing.JButton;
+
+public class Diary {
+	private static JTextField textField;
+	private static JTextField textField_1;
+	private static JTextField textField_2;
+
+	public static void main(String[] args) {
+		JFrame f = new JFrame("일기장입니다.");
+		f.getContentPane().setForeground(Color.WHITE);
+		f.getContentPane().setBackground(Color.BLACK);
+		f.setSize(350, 500);
+		f.getContentPane().setLayout(null);
+		
+		JLabel l1 = new JLabel("오늘의 날짜 >>");
+		l1.setFont(new Font("굴림체", Font.BOLD, 18));
+		l1.setForeground(Color.WHITE);
+		l1.setBounds(12, 10, 141, 44);
+		f.getContentPane().add(l1);
+		
+		JLabel l2 = new JLabel("오늘의 제목 >>");
+		l2.setForeground(Color.WHITE);
+		l2.setFont(new Font("굴림체", Font.BOLD, 18));
+		l2.setBounds(12, 64, 141, 44);
+		f.getContentPane().add(l2);
+		
+		JLabel l3 = new JLabel("오늘의 내용");
+		l3.setForeground(Color.WHITE);
+		l3.setFont(new Font("굴림체", Font.BOLD, 18));
+		l3.setBounds(12, 118, 141, 44);
+		f.getContentPane().add(l3);
+		
+		textField = new JTextField();
+		textField.setHorizontalAlignment(SwingConstants.CENTER);
+		textField.setFont(new Font("굴림체", Font.BOLD, 18));
+		textField.setBounds(165, 10, 157, 44);
+		f.getContentPane().add(textField);
+		textField.setColumns(10);
+		
+		textField_1 = new JTextField();
+		textField_1.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_1.setFont(new Font("굴림체", Font.BOLD, 18));
+		textField_1.setColumns(10);
+		textField_1.setBounds(165, 64, 157, 44);
+		f.getContentPane().add(textField_1);
+		
+		textField_2 = new JTextField();
+		textField_2.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_2.setFont(new Font("굴림체", Font.BOLD, 18));
+		textField_2.setColumns(10);
+		textField_2.setBounds(12, 158, 310, 239);
+		f.getContentPane().add(textField_2);
+		
+		JButton btnNewButton = new JButton("파일에 일기 저장");
+		btnNewButton.setBackground(Color.ORANGE);
+		btnNewButton.setForeground(Color.BLUE);
+		btnNewButton.setFont(new Font("굴림체", Font.BOLD, 20));
+		btnNewButton.setBounds(12, 407, 310, 44);
+		f.getContentPane().add(btnNewButton);
+		
+		f.setVisible(true);
+	}
+
+}

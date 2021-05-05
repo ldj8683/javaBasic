@@ -1,0 +1,96 @@
+package 그래픽;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import java.awt.Color;
+import javax.swing.JLabel;
+import javax.swing.text.Element;
+import javax.swing.text.html.ImageView;
+
+import java.awt.Font;
+import java.util.Date;
+
+public class 카운트다운 extends JFrame {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	// 객체생성하지 않아도 언제든지 static 메서드에서 접근해서 사용하려면 멤버변수도 반드시 static이 되어야 한다.
+	JLabel count, image, day;
+
+	public 카운트다운() {
+
+		getContentPane().setBackground(Color.LIGHT_GRAY);
+		setSize(800, 300);
+		getContentPane().setLayout(null);
+
+		count = new JLabel("");
+		count.setFont(new Font("맑은 고딕", Font.BOLD, 40));
+		count.setBounds(91, 55, 300, 96);
+		getContentPane().add(count);
+
+		image = new JLabel("");
+		image.setFont(new Font("맑은 고딕", Font.BOLD, 30));
+		image.setBounds(404, 10, 246, 171);
+		getContentPane().add(image);
+		/*
+		 * ImageIcon icon = new ImageIcon("001.png"); image.setIcon(icon);
+		 */
+
+		day = new JLabel("");
+		day.setFont(new Font("맑은 고딕", Font.BOLD, 30));
+		day.setBounds(91, 189, 575, 62);
+		getContentPane().add(day);
+		/*
+		 * Date date = new Date(); day.setText(date + "");
+		 */
+
+		// Day Thread
+		카운트2 cnt = new 카운트2();
+		cnt.start();
+		날짜2 day = new 날짜2();
+		day.start();
+
+		setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		new 카운트다운();
+	}// main end
+
+	// 변수를 공유해야하는 두 클래스가 있다면 클래스안에 클래스를 낄 수 있다.
+	// inner class(안쪽 클래스), 내부 클래스
+	// 내부클래스는 독립적으로 쓸 수 없다 외부에서 쓸 수 없다.
+	public class 카운트2 extends Thread {
+		@Override
+		public void run() {
+			for (int i = 500; i >= 0; i--) {
+				// System.out.println("카운트 >> " + i);
+				count.setText("카운트 >> " + i);
+				try {
+					Thread.sleep(500);
+				} catch (InterruptedException e) {
+					// interrupt : 일시적 방해, 중단 >> esc, ctrl+c, power-off, alt+f4
+				}
+			}
+		}
+	}
+
+	public class 날짜2 extends Thread {
+		@Override
+		public void run() {
+			for (int i = 0; i < 1000; i++) {
+				Date date2 = new Date();
+				day.setText("날짜>>" + date2);
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e) {
+					// interrupt : 일시적 방해, 중단 >> esc, ctrl+c, power-off, alt+f4
+				}
+			}
+		}
+	}
+
+	
+}// class end

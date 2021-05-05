@@ -1,0 +1,16 @@
+package Graphic1;
+
+import javax.swing.JFrame;
+
+public class ThreadGraphic/* extends JFrame */{
+	/* private static final long serialVersionUID = 1L; */
+
+	public static void main(String[] args) {
+		JFrame f = new JFrame();
+		f.setTitle("주식현황");
+		f.setSize(800, 600);
+		
+		f.setVisible(true);
+	}
+
+}

@@ -1,0 +1,13 @@
+package 크롤링;
+
+import javax.swing.JFrame;
+
+public class InnerClass extends JFrame {
+	private static final long serialVersionUID = 1L;
+	public InnerClass() {
+		
+	}
+	public static void main(String[] args) {
+		new InnerClass();
+	}
+}

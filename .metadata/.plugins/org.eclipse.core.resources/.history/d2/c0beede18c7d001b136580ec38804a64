@@ -1,0 +1,24 @@
+package 크롤링;
+
+
+import java.io.FileWriter;
+
+import org.jsoup.Connection;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.select.Elements;
+
+public class OPGG2 {
+
+	public static void main(String[] args) throws Exception {
+		Connection con = Jsoup.connect("https://overwatch.op.gg/heroes/global");
+		Document doc = con.get();
+		
+		Elements num = doc.select("td.Id");
+		Elements hero = doc.select("span.Name");
+		System.out.println(num.size());
+		System.out.println(hero.size());
+		
+		
+	}
+}

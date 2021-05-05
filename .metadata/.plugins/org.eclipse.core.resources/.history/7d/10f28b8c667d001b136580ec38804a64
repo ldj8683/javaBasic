@@ -1,0 +1,14 @@
+package 파일저장;
+
+import javax.swing.JFrame;
+
+public class Diary {
+
+	public static void main(String[] args) {
+		JFrame f = new JFrame("일기장입니다.");
+		f.setSize(350, 500);
+		
+		f.setVisible(true);
+	}
+
+}

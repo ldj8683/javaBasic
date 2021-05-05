@@ -1,0 +1,27 @@
+package 생성자;
+
+public class 직원 {
+	String name;
+	String gender;
+	int age;
+	
+	static int count;
+	static int sum;
+	
+	
+	
+	public 직원(String name, String gender, int age) {
+		count++;
+		sum += age;
+		this.name = name;
+		this.gender = gender;
+		this.age = age;
+	}
+
+
+	@Override
+	public String toString() {
+		return "직원 [name=" + name + ", gender=" + gender + ", age=" + age + "]";
+	}
+	
+}

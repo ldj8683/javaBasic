@@ -1,0 +1,56 @@
+package 그래픽;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import java.awt.Color;
+import java.awt.Font;
+import java.util.Iterator;
+
+public class ThreadGraphic extends JFrame {
+	
+	private static final long serialVersionUID = 1L;
+	JLabel count, image, day ;
+	
+	public ThreadGraphic() {
+		getContentPane().setBackground(Color.YELLOW);
+		setSize(800, 350);
+		getContentPane().setLayout(null);
+		
+		count = new JLabel("count");
+		count.setFont(new Font("돋움체", Font.BOLD, 40));
+		count.setForeground(Color.BLUE);
+		count.setBounds(98, 73, 259, 89);
+		getContentPane().add(count);
+		
+		image = new JLabel("image");
+		image.setForeground(Color.BLUE);
+		image.setFont(new Font("돋움체", Font.BOLD, 40));
+		image.setBounds(369, 30, 259, 175);
+		getContentPane().add(image);
+		
+		day = new JLabel("date");
+		day.setForeground(Color.BLUE);
+		day.setFont(new Font("돋움체", Font.BOLD, 40));
+		day.setBounds(98, 224, 575, 71);
+		getContentPane().add(day);
+		
+		setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		new ThreadGraphic();
+//		ThreadGraphic t = new ThreadGraphic();
+		
+	}
+	
+	public class Count extends Thread{
+		@Override
+		public void run() {
+			for(int i = 500; i > 0; i --) {
+				count.setText("Count >> "+i);
+			}
+		}
+		
+	}
+
+}

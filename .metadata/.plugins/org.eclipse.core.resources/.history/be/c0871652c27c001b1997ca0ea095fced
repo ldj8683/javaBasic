@@ -1,0 +1,13 @@
+package 스테틱;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+
+public class 크롤링 {
+
+	public static void main(String[] args) throws Exception {
+		// . .을 가지고 계속 해서 연결하는 방식 => 체인식 연결 방식
+		Document doc = Jsoup.connect("http://www.naver.com").get();
+	}
+
+}

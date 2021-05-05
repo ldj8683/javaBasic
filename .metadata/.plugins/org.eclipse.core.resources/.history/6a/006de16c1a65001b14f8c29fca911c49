@@ -1,0 +1,24 @@
+package conditional;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class Graphic {
+
+	public static void main(String[] args) {
+		// 각 변수명으로 할당하겠다.
+		// JFrame 프레임을 만들겠다. 
+		JFrame f = new JFrame();
+		// JButton 버튼을 만들겠다.(아직 프레임 안에 조립되어있지 않음) 
+		JButton b1 = new JButton();
+		JButton b2 = new JButton();
+		JButton b3 = new JButton();
+		
+		// f 라는 프레임의 크기를 정함
+		f.setSize(500, 500);
+		// f 라는 프레임을 띄워줌
+		f.setVisible(true);
+		
+	}
+
+}

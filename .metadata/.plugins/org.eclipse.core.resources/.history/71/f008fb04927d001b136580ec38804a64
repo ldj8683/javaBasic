@@ -1,0 +1,54 @@
+package 크롤링;
+
+
+
+
+import java.io.FileWriter;
+
+import org.jsoup.Connection;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.select.Elements;
+
+public class OPGG2 {
+
+	public static void main(String[] args) throws Exception {
+		Connection con = Jsoup.connect("https://overwatch.op.gg/heroes/global");
+		Document doc = con.get();
+		
+		Elements num = doc.select("td.Id");
+		Elements hero = doc.select("span.Name");
+		Elements val = doc.select("table.HeroesRank span.Value");
+		System.out.println(num.size());
+		System.out.println(hero.size());
+		System.out.println(val.size());
+		//System.out.println(val);
+		String[] a = new String[num.size()];
+		int x = 0;
+		while(x<num.size()) {
+			for (int i = 0; i < val.size(); i += 4) {
+				a[x] = val.get(i).text() + "\t" + val.get(i+1).text() + "\t"  + val.get(i+2).text() + "\t"  + val.get(i+3).text();
+				x++;
+			}
+		}
+		String[] b = new String[num.size()];
+		for (int i = 0; i < num.size(); i++) {
+			System.out.printf("%3s%15s\t%s\n",num.get(i).text(),hero.get(i).text(),a[i]);
+			b[i] = String.format("%3s%15s\t%s\n",num.get(i).text(),hero.get(i).text(),a[i]);
+		}
+		
+		try {
+			FileWriter f = new FileWriter("C:/data/lolrank.txt");
+			for (int i = 0; i < num.size(); i++) {
+				f.write(b[i] + "\n");
+			}
+			f.close();
+		} catch (Exception e) {
+			System.out.println("파일로 저장하는 중 에러가 발생함!");
+			System.out.println("에러정보 >> " + e.getMessage());
+		}
+		
+		
+		
+	}
+}

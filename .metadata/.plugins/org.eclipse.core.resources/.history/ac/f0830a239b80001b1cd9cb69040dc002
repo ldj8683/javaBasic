@@ -1,0 +1,7 @@
+package Graphic1;
+
+import javax.swing.JFrame;
+
+public class ThreadGraphic extends JFrame {
+
+}

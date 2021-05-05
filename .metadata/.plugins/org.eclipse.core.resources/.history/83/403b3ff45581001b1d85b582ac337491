@@ -1,0 +1,13 @@
+package 형변환;
+
+public class 참조형형변환4 {
+
+	public static void main(String[] args) {
+		// 객체설계할 때 2대 원칙
+		// 하나의 클래스안에는 하나의 역할만을 정의해야한다 	>> 응집도 (Cohesion)
+		// 결합시 특정한 클래스만 지정해 설계하면 안된다 	>> 결합도 (Coupling)
+		맨 m = new 맨();
+		
+	}
+
+}

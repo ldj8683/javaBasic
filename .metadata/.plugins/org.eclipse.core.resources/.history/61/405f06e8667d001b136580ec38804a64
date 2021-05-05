@@ -1,0 +1,72 @@
+package 파일저장;
+
+import javax.swing.JFrame;
+import java.awt.Color;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+import javax.swing.JButton;
+
+public class Diary {
+	private static JTextField t1;
+	private static JTextField t2;
+	private static JTextField t3;
+
+	public static void main(String[] args) {
+		JFrame f = new JFrame("일기장입니다.");
+		f.getContentPane().setForeground(Color.WHITE);
+		f.getContentPane().setBackground(Color.BLACK);
+		f.setSize(350, 500);
+		f.getContentPane().setLayout(null);
+		
+		JLabel l1 = new JLabel("오늘의 날짜 >>");
+		l1.setFont(new Font("굴림체", Font.BOLD, 18));
+		l1.setForeground(Color.WHITE);
+		l1.setBounds(12, 10, 141, 44);
+		f.getContentPane().add(l1);
+		
+		JLabel l2 = new JLabel("오늘의 제목 >>");
+		l2.setForeground(Color.WHITE);
+		l2.setFont(new Font("굴림체", Font.BOLD, 18));
+		l2.setBounds(12, 64, 141, 44);
+		f.getContentPane().add(l2);
+		
+		JLabel l3 = new JLabel("오늘의 내용");
+		l3.setForeground(Color.WHITE);
+		l3.setFont(new Font("굴림체", Font.BOLD, 18));
+		l3.setBounds(12, 118, 141, 44);
+		f.getContentPane().add(l3);
+		
+		t1 = new JTextField();
+		t1.setHorizontalAlignment(SwingConstants.CENTER);
+		t1.setFont(new Font("굴림체", Font.BOLD, 18));
+		t1.setBounds(165, 10, 157, 44);
+		f.getContentPane().add(t1);
+		t1.setColumns(10);
+		
+		t2 = new JTextField();
+		t2.setHorizontalAlignment(SwingConstants.CENTER);
+		t2.setFont(new Font("굴림체", Font.BOLD, 18));
+		t2.setColumns(10);
+		t2.setBounds(165, 64, 157, 44);
+		f.getContentPane().add(t2);
+		
+		t3 = new JTextField();
+		t3.setHorizontalAlignment(SwingConstants.TRAILING);
+		t3.setFont(new Font("굴림체", Font.BOLD, 20));
+		t3.setColumns(10);
+		t3.setBounds(12, 158, 310, 239);
+		f.getContentPane().add(t3);
+		
+		JButton b1 = new JButton("파일에 일기 저장");
+		b1.setBackground(Color.ORANGE);
+		b1.setForeground(Color.BLUE);
+		b1.setFont(new Font("굴림체", Font.BOLD, 20));
+		b1.setBounds(12, 407, 310, 44);
+		f.getContentPane().add(b1);
+		
+		f.setVisible(true);
+	}
+
+}

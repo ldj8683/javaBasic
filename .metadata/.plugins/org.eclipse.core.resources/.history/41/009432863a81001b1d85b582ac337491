@@ -1,0 +1,26 @@
+package 크롤링;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import java.awt.Color;
+import java.awt.Font;
+
+public class InnerClass extends JFrame {
+	private static final long serialVersionUID = 1L;
+	//JLabel name, price, table, day;
+	public InnerClass() {
+		getContentPane().setBackground(Color.LIGHT_GRAY);
+		setSize(800, 300);
+		getContentPane().setLayout(null);
+		
+		JLabel name1 = new JLabel("New label");
+		name1.setFont(new Font("굴림", Font.BOLD, 30));
+		name1.setBounds(278, 10, 252, 50);
+		getContentPane().add(name1);
+		
+		setVisible(true);
+	}
+	public static void main(String[] args) {
+		new InnerClass();
+	}
+}

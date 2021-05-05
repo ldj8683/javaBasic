@@ -1,0 +1,46 @@
+package 크롤링;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import java.awt.Color;
+import java.awt.Font;
+import javax.swing.SwingConstants;
+
+public class InnerClass extends JFrame {
+	private static final long serialVersionUID = 1L;
+	//JLabel name, price, table, day;
+	public InnerClass() {
+		getContentPane().setBackground(Color.LIGHT_GRAY);
+		setSize(800, 300);
+		getContentPane().setLayout(null);
+		
+		JLabel name = new JLabel("New label");
+		name.setHorizontalAlignment(SwingConstants.CENTER);
+		name.setFont(new Font("굴림", Font.BOLD, 30));
+		name.setBounds(278, 10, 252, 50);
+		getContentPane().add(name);
+		
+		JLabel price = new JLabel("price");
+		price.setHorizontalAlignment(SwingConstants.CENTER);
+		price.setFont(new Font("굴림", Font.BOLD, 30));
+		price.setBounds(119, 96, 252, 50);
+		getContentPane().add(price);
+		
+		JLabel table = new JLabel("table");
+		table.setHorizontalAlignment(SwingConstants.CENTER);
+		table.setFont(new Font("굴림", Font.BOLD, 30));
+		table.setBounds(389, 96, 252, 50);
+		getContentPane().add(table);
+		
+		JLabel day = new JLabel("date");
+		day.setHorizontalAlignment(SwingConstants.CENTER);
+		day.setFont(new Font("굴림", Font.BOLD, 30));
+		day.setBounds(106, 180, 536, 50);
+		getContentPane().add(day);
+		
+		setVisible(true);
+	}
+	public static void main(String[] args) {
+		new InnerClass();
+	}
+}

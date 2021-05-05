@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>제주어때</title>
+</head>
+	<body>
+		<h1>숙소 상세정보 등록 화면 입니다.</h1>
+		<hr color="black">
+		<!-- 상품DB.java안에서 메서드를 추가해주세요, (crud) -->
+		<!-- 본인 프로젝트 주제로 입력하는 화면을 만들어보세요. -->
+		<!-- prduct2.jsp -->
+		<form action="product.jsp">
+			이름:<input name="name"><br>
+			주소:<input name="address"><br>
+			간단한 호텔 소개:<textarea rows="5" cols="20" name="briefing"></textarea><br>
+			숙소 타입:
+			<select name="type">
+				<option value="싱글">싱글</option>
+				<option value="더블">더블</option>
+				<option value="트윈">트윈</option>
+			</select><br>
+			숙소 가격:<input name="price"><br>
+			숙소 정보:<textarea rows="30" cols="40" name="info"></textarea><br>
+			<button>숙소 정보 등록</button>
+		</form>
+	</body>
+</html>

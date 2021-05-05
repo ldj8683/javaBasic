@@ -1,0 +1,26 @@
+package Graphic1;
+
+import java.io.IOException;
+
+import org.jsoup.Connection;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.select.Elements;
+
+public class Crowling {
+
+	public static void main(String[] args) throws IOException {
+		Connection con = Jsoup.connect("https://finance.naver.com/item/main.nhn?code=005930");
+		Document doc = con.get();
+
+		
+		Elements code = doc.select("span.code");
+		Elements info = doc.select("div.rate_info div.today");
+		System.out.println(code.size());
+		System.out.println(info.size());
+		System.out.println(code);
+		System.out.println(info.text());
+		
+	}
+
+}

@@ -1,0 +1,14 @@
+package 형변환;
+
+public class 참조형형변환1 {
+
+	public static void main(String[] args) {
+		사람 p = new 사람();
+		슈퍼맨 s = new 슈퍼맨();
+		맨 m = new 맨();
+		우먼 w = new 우먼();
+		
+		p = s; // p가 가장 큼, s는 가장 작다 (자동형변환)
+	}
+
+}

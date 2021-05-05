@@ -1,0 +1,10 @@
+package 스테틱;
+
+public class 스테틱메서드사용 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

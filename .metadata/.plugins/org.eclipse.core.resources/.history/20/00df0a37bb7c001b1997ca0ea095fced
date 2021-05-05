@@ -1,0 +1,18 @@
+package 생성자;
+
+public class 직원채용 {
+
+	public static void main(String[] args) {
+		직원 wk1 = new 직원("홍길동", "남", 25);
+		직원 wk2 = new 직원("김길동", "여", 26);
+		직원 wk3 = new 직원("송길동", "남", 27);
+		
+		System.out.println(wk1);
+		System.out.println(wk2);
+		System.out.println(wk3);
+		System.out.println("직원의 수 >> " + 직원.count +"명");
+		System.out.println("직원의 평균 나이 >> " + (double)직원.sum / 직원.count + "살");
+		
+	}
+
+}

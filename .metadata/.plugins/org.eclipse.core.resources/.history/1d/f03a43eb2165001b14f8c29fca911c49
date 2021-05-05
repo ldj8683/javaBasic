@@ -1,0 +1,25 @@
+package conditional;
+
+import javax.swing.JFrame;
+import java.awt.Color;
+import javax.swing.JTextField;
+import java.awt.Font;
+
+public class Graphic03 {
+	private static JTextField textField;
+
+	public static void main(String[] args) {
+		JFrame f = new JFrame();
+		f.getContentPane().setBackground(Color.GREEN);
+		f.getContentPane().setLayout(null);
+		
+		textField = new JTextField();
+		textField.setBackground(new Color(255, 255, 255));
+		textField.setFont(new Font("맑은 고딕", Font.BOLD, 40));
+		textField.setBounds(222, 137, 116, 21);
+		f.getContentPane().add(textField);
+		textField.setColumns(10);
+		f.setSize(600, 600);
+		f.setVisible(true);
+	}
+}

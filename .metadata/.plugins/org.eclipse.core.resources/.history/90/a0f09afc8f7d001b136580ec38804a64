@@ -1,0 +1,43 @@
+package 크롤링;
+
+
+
+
+import org.jsoup.Connection;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.select.Elements;
+
+public class OPGG2 {
+
+	public static void main(String[] args) throws Exception {
+		Connection con = Jsoup.connect("https://overwatch.op.gg/heroes/global");
+		Document doc = con.get();
+		
+		Elements num = doc.select("td.Id");
+		Elements hero = doc.select("span.Name");
+		Elements val = doc.select("table.HeroesRank span.Value");
+		System.out.println(num.size());
+		System.out.println(hero.size());
+		System.out.println(val.size());
+		//System.out.println(val);
+		String[] a = new String[num.size()];
+		int x = 0;
+		while(x<num.size()) {
+			for (int i = 0; i < val.size(); i += 4) {
+				a[x] = val.get(i).text() + "\t" + val.get(i+1).text() + "\t"  + val.get(i+2).text() + "\t"  + val.get(i+3).text();
+				x++;
+			}
+		}
+		System.out.println(x);
+		for (int i = 0; i < num.size(); i++) {
+			System.out.println(num.get(i).text() + "\t" + hero.get(i).text() + "\t" + a[i]);
+		}
+		for (int i = 0; i < num.size(); i++) {
+			System.out.printf("%s%s%s",num.get(i).text(),hero.get(i).text(),a[i]);
+		}
+		
+		
+		
+	}
+}

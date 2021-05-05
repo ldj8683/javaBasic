@@ -1,0 +1,17 @@
+package 형변환;
+
+import java.util.ArrayList;
+import java.util.Random;
+
+public class 참조형형변환2 {
+
+	public static void main(String[] args) {
+		ArrayList list = new ArrayList();
+		list.add("홍길동");
+		list.add(new 맨());
+		list.add(new Random());
+		list.add(new 슈퍼맨());
+		System.out.println(list);
+	}
+
+}

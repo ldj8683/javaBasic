@@ -1,0 +1,25 @@
+package 생성자;
+
+public class Day {
+	// 전역변수 선언
+	String hobby;
+	int time;
+	String place;
+	
+	int sum = 0;
+	double avg = 0.0;
+	
+	// Day 생성자 메서드 생성
+	public Day(String hobby, int time, String place) {
+		this.hobby = hobby;
+		this.time = time;
+		this.place = place;
+		
+		
+	}
+	
+	@Override // toString 재정의
+	public String toString() {
+		return "Day [hobby=" + hobby + ", time=" + time + ", place=" + place + "]";
+	}
+}

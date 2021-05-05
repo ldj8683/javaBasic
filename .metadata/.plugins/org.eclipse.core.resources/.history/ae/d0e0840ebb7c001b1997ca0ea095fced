@@ -1,0 +1,10 @@
+package 생성자;
+
+public class 직원채용 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

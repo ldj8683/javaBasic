@@ -1,0 +1,22 @@
+package 그래픽;
+
+import javax.swing.JLabel;
+
+public class 카운트 extends Thread{
+	JLabel count;
+	public 카운트(JLabel count) {
+		this.count = count;
+	}
+	
+	@Override
+	public void run() {
+		for(int i = 500; i >= 0 ; i --) {
+			System.out.println("카운트 >> " + i);
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				//interrupt : 일시적 방해, 중단 >> esc, ctrl+c, power-off, alt+f4
+			}
+		}
+	}
+}

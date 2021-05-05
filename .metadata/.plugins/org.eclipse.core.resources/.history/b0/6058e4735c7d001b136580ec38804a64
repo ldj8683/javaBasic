@@ -1,0 +1,15 @@
+package 예외처리;
+
+public class 에러발생2 {
+	// 예외가 발생하면 메서드가 정의된 곳에서 처리하는 것이 아니라
+	// 메서드를 호출하는 곳으로 예외 처리를 떠넘길 수 있다.
+	public void call() {
+		try {
+			System.out.println(3/0);
+		} catch (Exception e) {
+			System.out.println("에러가 발생함. " + e.getMessage());
+			e.printStackTrace();
+		}
+	}
+	
+}

@@ -1,0 +1,22 @@
+package 크롤링;
+
+import org.jsoup.Connection;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.select.Elements;
+
+public class R6 {
+
+	public static void main(String[] args) throws Exception {
+		Connection con = Jsoup.connect("https://r6.op.gg/");
+		Document doc = con.get();
+		
+		Elements hero = doc.select("td.text-truncate img");
+		//Elements win
+		System.out.println(hero.size());
+		System.out.println(hero);
+		
+
+	}
+
+}

@@ -1,0 +1,11 @@
+package 스테틱;
+
+import org.jsoup.Jsoup;
+
+public class 크롤링 {
+
+	public static void main(String[] args) {
+		Jsoup.connect("http://www.naver.com").get();
+	}
+
+}

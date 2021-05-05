@@ -1,0 +1,11 @@
+package 생성자;
+
+import javax.swing.JFrame;
+
+public class TV사용 {
+
+	public static void main(String[] args) {
+		JFrame f = new JFrame();
+	}
+
+}

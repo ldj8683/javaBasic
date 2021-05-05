@@ -1,0 +1,13 @@
+package 그래픽;
+
+import javax.swing.JFrame;
+
+public class 카운트다운 {
+
+	public static void main(String[] args) {
+		JFrame f = new JFrame("카운트 다운");
+		f.setSize(800, 300);
+		f.setVisible(true);
+	}
+
+}

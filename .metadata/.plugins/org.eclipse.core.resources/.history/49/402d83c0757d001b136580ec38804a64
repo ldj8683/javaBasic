@@ -1,0 +1,16 @@
+package 파일저장;
+
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class 파일에저장 {
+	public static void main(String[] args) {
+		try {
+			FileWriter f = new FileWriter("test.txt");
+			f.close();
+		} catch (IOException e) {
+			System.out.println("파일로 저장하는 중 에러가 발생함!");
+			System.out.println("에러정보 >> " + e.getMessage());
+		}
+	}
+}

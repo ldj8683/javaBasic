@@ -1,0 +1,10 @@
+package 그래픽;
+
+public class 카운트 extends Thread {
+	@Override
+	public void run() {
+		for(int i = 500; i >= 0 ; i --) {
+			System.out.println(i);
+		}
+	}
+}

@@ -1,0 +1,15 @@
+package 크롤링;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class InnerClass extends JFrame {
+	private static final long serialVersionUID = 1L;
+	JLabel name, price, table, day;
+	public InnerClass() {
+		
+	}
+	public static void main(String[] args) {
+		new InnerClass();
+	}
+}

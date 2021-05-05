@@ -1,0 +1,51 @@
+package Graphic2;
+
+import java.awt.Color;
+
+import java.awt.Font;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class ThreadGraphic extends JFrame {
+	private static final long serialVersionUID = 1L;
+	JLabel count, image, day;
+	int cnt = 100;
+
+	// 기본 생성자
+	// void 를 넣으면 생성자가 아니게 된다
+	public ThreadGraphic() {
+		// 객체 생성이 이부분이 자동으로 실행이 될 것이다.
+		getContentPane().setBackground(Color.YELLOW);
+		setSize(800, 350);
+		getContentPane().setLayout(null);
+
+		count = new JLabel("");
+		count.setFont(new Font("돋움체", Font.BOLD, 40));
+		count.setForeground(Color.BLUE);
+		count.setBounds(105, 102, 307, 89);
+		getContentPane().add(count);
+
+		image = new JLabel("");
+		image.setForeground(Color.BLUE);
+		image.setFont(new Font("돋움체", Font.BOLD, 40));
+		image.setBounds(401, 30, 259, 175);
+		getContentPane().add(image);
+
+		day = new JLabel("");
+		day.setForeground(Color.BLUE);
+		day.setFont(new Font("돋움체", Font.BOLD, 35));
+		day.setBounds(50, 200, 700, 71);
+		getContentPane().add(day);
+		
+		setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		ThreadGraphic t = new ThreadGraphic();
+		Count cnt = new Count(t.count);
+		cnt.start();
+		Day day2 = new Day(t.day);
+		day2.start();
+	}
+}

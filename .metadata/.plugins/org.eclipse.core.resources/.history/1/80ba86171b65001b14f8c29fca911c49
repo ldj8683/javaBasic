@@ -1,0 +1,35 @@
+package conditional;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class Graphic {
+
+	public static void main(String[] args) {
+		// 각 변수명으로 할당하겠다.
+		// JFrame 프레임을 만들겠다. 
+		JFrame f = new JFrame();
+		// JButton 버튼을 만들겠다.(아직 프레임 안에 조립되어있지 않음) 
+		JButton b1 = new JButton();
+		JButton b2 = new JButton();
+		JButton b3 = new JButton();
+		
+		// f 라는 프레임의 크기를 정함
+		f.setSize(500, 500);
+		
+		// f 라는 프레임에 만들어둔 JButton을 올릴것
+		f.add(b1);
+		// 만들어 놓은 b1 버튼에 택스트를 넣어줌
+		b1.setText("나를 눌러주세요.");
+		
+		
+		
+		
+		// f 라는 프레임을 띄워줌
+		//(최종적으로 조립한 것들을 띄워주는 것이기 때문에 창을 만드는 코딩에서 맨 마지막에 넣어줘야함)
+		f.setVisible(true);
+			
+		
+	}
+
+}

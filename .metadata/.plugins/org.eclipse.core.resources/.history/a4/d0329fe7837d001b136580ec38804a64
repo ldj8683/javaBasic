@@ -1,0 +1,40 @@
+package 크롤링;
+
+
+import org.jsoup.Connection;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.select.Elements;
+
+public class 네이버크롤링 {
+
+	public static void main(String[] args) throws Exception {
+		Connection con = Jsoup.connect("https://finance.naver.com/sise/");
+		Document doc = con.get();
+		
+		Elements div = doc.select("div.rgt ul#popularItemList a");
+		Elements div2 = doc.select("div.rgt ul#popularItemList span");
+		System.out.println(div.size());
+		//System.out.println(div.text());
+		//System.out.println(div2.text().split(" ")[0]);
+		
+		
+		for (int i = 0; i < div.size(); i++) {
+			System.out.println(div.get(i).text());
+		}
+		
+		String[] a = new String[10];
+
+		int i = 0;
+			for(int j = 0; j<div2.size(); j+=2) {
+				
+				a[i] = div2.get(j).text();
+				i++;
+			}			
+		for (int i = 0; i < a.length; i++) {
+			System.out.println(a[i]);
+		}
+
+	}
+
+}

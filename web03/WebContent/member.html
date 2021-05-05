@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>회원가입화면</title>
+	</head>
+	<body>
+		<h1>회원가입 화면입니다.</h1>
+		<hr width="1000" color="red">
+		<!-- form 갑을 입력하고 싶을 때 사용 -->
+		<!-- 입력값들은 모두 form안에 들어가야 한다 -->
+		<!-- action: 입력값을 받아서 처리하는 다음 페이지를 지정 -->
+		<form action="member2.jsp">
+			<!-- 자바를 쓸수 있는 웹용 부품이 필요하다 => .jsp -->
+			아이디: <input name="id"><br>
+			패스워드: <input name="pw"><br>
+			이름: <input name="name"><br>
+			연락처:
+			<select name="company">
+				<option value="SK">SK</option>
+				<option value="LG">LG</option>
+				<option value="KT">KT</option>
+			</select>			
+			<input name="tel"><br>
+			성별:
+			<!-- radio는 여러개 중 하나만 선택해야한다. -->
+			<input type="radio" value="남자" name="gender">남자
+			<input type="radio" value="여자" name="gender">여자
+			<br>
+			취미:
+			<!-- checkbox는 여러개 선택 가능하다. -->
+			<input type="checkbox" value="운동" name="hobby">운동
+			<input type="checkbox" value="독서" name="hobby">독서
+			<input type="checkbox" value="운동" name="hobby">등산
+			<br>
+			하고 싶은말:
+			<!-- 5줄, 1줄에 20글자씩 -->
+			<textarea rows="5" cols="20" name="word"></textarea>
+			<button>서버로 전송</button>	
+			<!-- http://localhost:8888/web02/member2.html?id=root&pw=1234&name=park&tel=011 -->
+			<!-- 입력을 하면 위 주석처럼 데이터를 전송합니다. -->
+		</form>
+	</body>
+</html>

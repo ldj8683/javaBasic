@@ -1,0 +1,10 @@
+package 파일저장;
+
+public class 일기장 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

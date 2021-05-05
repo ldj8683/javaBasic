@@ -1,0 +1,10 @@
+package 스레드;
+
+public class 동시프로그램실행 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

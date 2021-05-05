@@ -1,0 +1,10 @@
+package 크롤링;
+
+public class InnerClass {
+	public InnerClass() {
+		
+	}
+	public static void main(String[] args) {
+		
+	}
+}

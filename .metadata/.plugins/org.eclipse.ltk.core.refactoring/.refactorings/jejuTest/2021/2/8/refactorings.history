@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;ProductDbConnect1.jsp, ProductDbConnect2.jsp, ProductDbConnect3.jsp, ProductDelete.jsp, ProductDetail.jsp, ProductRegister.jsp, ProductSummary.jsp, ProductUpdate.jsp&apos; to &apos;product&apos;" description="Move 8 resources to &apos;product&apos;" destination="WebContent/product" element1="WebContent/ProductDbConnect1.jsp" element2="WebContent/ProductDbConnect2.jsp" element3="WebContent/ProductDbConnect3.jsp" element4="WebContent/ProductDelete.jsp" element5="WebContent/ProductDetail.jsp" element6="WebContent/ProductRegister.jsp" element7="WebContent/ProductSummary.jsp" element8="WebContent/ProductUpdate.jsp" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="8" stamp="1613623922201" updateReferences="true"/>
+</session>

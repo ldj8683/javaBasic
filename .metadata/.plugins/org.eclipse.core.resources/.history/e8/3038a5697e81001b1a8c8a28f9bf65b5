@@ -1,0 +1,12 @@
+package 네트워크;
+
+import java.net.ServerSocket;
+
+public class TCP서버 {
+
+	public static void main(String[] args) {
+		//클랑언트의 요청을 승인해주기 위한 소켓
+		ServerSocket server = new ServerSocket(9000);
+	}
+
+}

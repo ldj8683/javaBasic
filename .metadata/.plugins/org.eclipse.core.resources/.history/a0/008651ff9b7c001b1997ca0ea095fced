@@ -1,0 +1,15 @@
+package 생성자;
+
+public class 은행 {
+
+	public static void main(String[] args) {
+		계좌 acc1 = new 계좌("홍길동", "튼튼적금", 1000);
+		계좌 acc2 = new 계좌("박길동", "튼튼적금", 2000);
+		계좌 acc3 = new 계좌("홍기사", "다음적금", 3000);
+		
+		System.out.println(acc1);
+		System.out.println(acc2);
+		System.out.println(acc3);
+	}
+
+}

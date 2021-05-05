@@ -1,0 +1,5 @@
+package 그래픽;
+
+public class 이미지 extends Thread {
+
+}

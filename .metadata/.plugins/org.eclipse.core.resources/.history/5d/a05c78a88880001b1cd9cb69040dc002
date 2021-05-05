@@ -1,0 +1,10 @@
+package Graphic2;
+
+import javax.swing.JLabel;
+
+public class Image extends Thread {
+	JLabel image;
+	public Image(JLabel image) {
+		this.image = image;
+	}
+}

@@ -1,0 +1,26 @@
+package 생성자;
+
+public class TV {
+	int ch;
+	int vol;
+	boolean onOff;
+	
+	public TV(int ch, int vol, boolean onOff) {
+		this.ch = ch;
+		this.vol = vol;
+		this.onOff = onOff;
+	}
+	
+	public void on() {
+		System.out.println("켜다.");
+	}
+	public void off() {
+		System.out.println("끄다.");
+	}
+	
+	@Override
+	public String toString() {
+		return "TV [ch=" + ch + ", vol=" + vol + ", onOff=" + onOff + "]";
+	}
+	
+}

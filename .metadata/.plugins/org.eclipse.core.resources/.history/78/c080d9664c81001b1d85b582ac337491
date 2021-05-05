@@ -1,0 +1,19 @@
+package 형변환;
+
+import java.util.ArrayList;
+import java.util.Random;
+
+public class 참조형형변환2 {
+
+	public static void main(String[] args) {
+		ArrayList list = new ArrayList();
+		// 자동형변환 Object로 변환!
+		// 자동형변환의 단점 : 부가적으로 추가되는 기능을 쓸 수 없다.
+		list.add("홍길동"); //index 0
+		list.add(new 맨()); //index 1
+		list.add(new Random()); //index 2
+		list.add(new 슈퍼맨()); //index 3
+		System.out.println(list);
+	}
+
+}

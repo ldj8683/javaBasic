@@ -1,0 +1,55 @@
+package Graphic1;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.SwingConstants;
+import java.awt.Color;
+
+public class ThreadGraphic extends JFrame{
+	private static final long serialVersionUID = 1L;
+	JLabel name, image, day, price;
+
+	public ThreadGraphic() {
+		getContentPane().setBackground(Color.ORANGE);
+		getContentPane().setForeground(Color.BLACK);
+		setTitle("주식현황");
+		setSize(800, 400);
+		getContentPane().setLayout(null);
+		
+		name = new JLabel("");
+		name.setHorizontalAlignment(SwingConstants.CENTER);
+		name.setFont(new Font("돋움", Font.BOLD, 20));
+		name.setBounds(240, 74, 474, 67);
+		getContentPane().add(name);
+		
+		image = new JLabel("");
+		image.setHorizontalAlignment(SwingConstants.CENTER);
+		image.setFont(new Font("돋움", Font.BOLD, 30));
+		image.setBounds(78, 74, 150, 150);
+		getContentPane().add(image);
+		
+		day = new JLabel("date");
+		day.setHorizontalAlignment(SwingConstants.CENTER);
+		day.setFont(new Font("돋움", Font.BOLD, 30));
+		day.setBounds(64, 234, 650, 88);
+		getContentPane().add(day);
+		
+		price = new JLabel("price");
+		price.setHorizontalAlignment(SwingConstants.CENTER);
+		price.setFont(new Font("돋움", Font.BOLD, 30));
+		price.setBounds(240, 157, 474, 67);
+		getContentPane().add(price);
+		
+		setVisible(true);
+	}
+	public static void main(String[] args) {
+		ThreadGraphic t = new ThreadGraphic();
+		Image img = new Image(t.image);
+		img.start();
+		Name na = new Name(t.name);
+		na.start();
+		Price m = new Price(t.price);
+		m.start();
+	}
+}

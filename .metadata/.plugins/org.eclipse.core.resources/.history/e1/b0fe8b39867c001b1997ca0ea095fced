@@ -1,0 +1,15 @@
+package 어제복습;
+
+public class Phone사용 {
+	public static void main(String[] args) {
+		Phone p1 = new Phone();
+		p1.color="빨강";
+		p1.size=7;
+		System.out.println(p1);
+		
+		Phone p2 = new Phone();
+		p2.color="파랑";
+		p2.size=11;
+		System.out.println(p2);
+	}
+}

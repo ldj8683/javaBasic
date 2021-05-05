@@ -1,0 +1,58 @@
+package conditional;
+
+import javax.swing.JFrame;
+import java.awt.Color;
+import javax.swing.JTextField;
+import java.awt.Font;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JLabel;
+
+public class Graphic03 {
+	private static JTextField t1;
+	private static JTextField t2;
+
+	public static void main(String[] args) {
+		JFrame f = new JFrame();
+		f.getContentPane().setBackground(Color.GREEN);
+		f.getContentPane().setLayout(null);
+		
+		t1 = new JTextField();
+		t1.setForeground(Color.BLUE);
+		t1.setFont(new Font("맑은 고딕", Font.BOLD, 40));
+		t1.setBounds(225, 110, 264, 68);
+		f.getContentPane().add(t1);
+		t1.setColumns(10);
+		
+		t2 = new JTextField();
+		t2.setForeground(Color.BLUE);
+		t2.setFont(new Font("맑은 고딕", Font.BOLD, 40));
+		t2.setColumns(10);
+		t2.setBounds(225, 205, 264, 68);
+		f.getContentPane().add(t2);
+		
+		JButton b1 = new JButton("New button");
+		b1.setFont(new Font("맑은 고딕", Font.BOLD, 50));
+		b1.setBackground(Color.BLACK);
+		b1.setForeground(Color.WHITE);
+		b1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		b1.setBounds(81, 306, 408, 68);
+		f.getContentPane().add(b1);
+		
+		JLabel l1 = new JLabel("아 이 디:");
+		l1.setFont(new Font("맑은 고딕", Font.BOLD, 30));
+		l1.setBounds(81, 110, 132, 68);
+		f.getContentPane().add(l1);
+		
+		JLabel l1_1 = new JLabel("패스워드:");
+		l1_1.setFont(new Font("맑은 고딕", Font.BOLD, 30));
+		l1_1.setBounds(81, 205, 132, 68);
+		f.getContentPane().add(l1_1);
+		f.setSize(600, 600);
+		f.setVisible(true);
+	}
+}
